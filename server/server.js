@@ -6,12 +6,9 @@ const PORT =3002;
 const app=express();
 app.use(express.json());
 
-const corsOptions={
-    optionsSuccessStatus: 200,
-};
 
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.get("/getWeather",async(req,res)=>{
     const {city}=req.query;
     const api_key="76cee35d54ce9b05286772e928ff00d9";
